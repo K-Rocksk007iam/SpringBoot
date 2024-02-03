@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here 
+    <bean class="example.spring.core.HelloService" id="HelloBean"></bean>
+    <bean class="example.spring.core.WelcomeService" id="WelcomeBean"></bean>
+    
+    <bean class="example.spring.core.UserService" id="UserBean">
+    <property name="name" value="kunal"></property>
+    <property name="age" value="22"></property>
+    <property name="message" value="good afternoon"></property>
+    </bean>
+    
+      <bean class="example.spring.core.UserService" id="UserBean2">
+    <constructor-arg value="radha"></constructor-arg>
+    <constructor-arg value="1"></constructor-arg>
+    <constructor-arg value="meow"></constructor-arg>
+    </bean>
+    
+     <bean class="example.spring.core.UserService" id="UserBean3">
+    <constructor-arg value="shant bas" index="2"></constructor-arg>
+    <constructor-arg value="Radha" index="1"></constructor-arg>
+    <constructor-arg value="23" index="0"></constructor-arg>
+    </bean>
+    -->
+     <bean class="example.spring.core.dependencyInjection.Engine" id="engine1">
+     <property name="engine" value="petrol"></property>
+     <property name="power" value="1200cc"></property>
+     </bean>
+ 
+     <bean class="example.spring.core.dependencyInjection.MusicSystem" id="console1">
+     <property name="make" value="JBL"></property>
+     <property name="soundEffect" value="Dolby"></property>
+     </bean>
+     
+     <bean class="example.spring.core.dependencyInjection.Car" id="car1">
+     <property name="make" value="Honda"></property>
+     <property name="model" value="City"></property>
+     <property name="engineDetails" ref="engine1"></property>
+     <property name="musicSystemDetails" ref="console1"></property>
+     </bean>
+
+</beans>		 
